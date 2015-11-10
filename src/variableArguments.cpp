@@ -14,15 +14,14 @@ ERROR CASES:
 
 NOTES: 		use stdarg.h header.
 */
-
 int variableArguments(int arg_count, ...)
 {
-	int i, count = 0;
-	int va_arg;
-	arg_count = va_arg;
+	int i=0, count = 0;
+	va_list a;
+	va_start(a, arg_count);
 	for (i = 0; i < arg_count; i++)
 	{
-		if (va_arg>90)
+		if (va_arg(a,int)>90)
 			count++;
 	}
 	return count;
