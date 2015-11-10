@@ -24,5 +24,6 @@ int variableArguments(int arg_count, ...)
 		if (va_arg(a,int)>90)
 			count++;
 	}
+	va_end(a);
 	return count;
 }
